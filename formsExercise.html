@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML Forms Exercise">
+    <title>HTML Forms Exercise</title>
+</head>
+
+<body>
+    <fieldset>
+        <label for="storenum">Store Number</label>
+        <select name="storenumber" id="storenum">
+            <option value="3109">3019</option>
+            <option value="2421">2421</option>
+            <option value="5357">5357</option>
+        </select>
+        <fieldset>
+            <legend>When You Visited</legend>
+            <label for="date">Date</label>
+            <input type="date">
+            <br>
+            <label for="time">Time</label>
+            <input type="time">
+        </fieldset>
+        <label for="name">Full Name:</label>
+        <input type="text" placeholder="Name">
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" placeholder="Email">
+        <fieldset>
+            <legend>How Would You Rate Your Level of  Satisfaction With This Visit</legend>
+            <select name="lvl" id="lvl">
+                <option value="satisfied">Satisfied</option>
+                <option value="neither">Neither Satisfied nor Dissatisfied</option>
+                <option value="dissatisfied">Dissatisfied</option>
+            </select>
+        </fieldset>
+        <label for="about">Tell us about your experience:</label>
+        <br>
+        <input type="text" id="about">
+        <br>
+        <label for="visits">Times visited in the last month:</label>
+        <br>
+        <input type="text" id="visits">
+        <br>
+        <input type="checkbox" id="check"> 
+        <label for="check">Please check the box if you would be willing to be contacted about your experience</label>
+        <br>
+        <input type="submit">
+    </fieldset>
+</body>
+
+</html>
