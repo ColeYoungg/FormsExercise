@@ -13,6 +13,7 @@
     <fieldset>
         <label for="storenum">Store Number</label>
         <select name="storenumber" id="storenum">
+            <option value="" disabled selected>Select a Store</option>
             <option value="3109">3019</option>
             <option value="2421">2421</option>
             <option value="5357">5357</option>
@@ -20,7 +21,7 @@
         <fieldset>
             <legend>When You Visited</legend>
             <label for="date">Date</label>
-            <input type="date">
+            <input type="date" min="2022-01-01" max="2022-31-12">
             <br>
             <label for="time">Time</label>
             <input type="time">
@@ -31,12 +32,16 @@
         <label for="email">Email:</label>
         <input type="email" placeholder="Email">
         <fieldset>
-            <legend>How Would You Rate Your Level of  Satisfaction With This Visit</legend>
-            <select name="lvl" id="lvl">
-                <option value="satisfied">Satisfied</option>
-                <option value="neither">Neither Satisfied nor Dissatisfied</option>
-                <option value="dissatisfied">Dissatisfied</option>
-            </select>
+            <legend>How Would You Rate Your Level of Satisfaction With This Visit</legend>
+            <input type="radio" id="satisfied" name="satisfied">
+            <label for="satisfied">Satisfied</label>
+            <br>
+            <input type="radio" id="neither" name="satisfied" checked>
+            <label for="neither">Neither Satisfied nor Dissatisfied</label>
+            <br>
+            <input type="radio" id="dissatisfied" name="satisfied">
+            <label for="dissatisfied">Dissatisfied</label>
+
         </fieldset>
         <label for="about">Tell us about your experience:</label>
         <br>
@@ -44,12 +49,14 @@
         <br>
         <label for="visits">Times visited in the last month:</label>
         <br>
-        <input type="text" id="visits">
+        <input type="number" id="visits" min="1" max="30">
         <br>
-        <input type="checkbox" id="check"> 
+        <input type="checkbox" required id="check">
         <label for="check">Please check the box if you would be willing to be contacted about your experience</label>
         <br>
-        <input type="submit">
+        <input type="password" placeholder="Password" pattern=".{5,10}" required>
+        <br>
+        <input type="submit"> <input type="reset">
     </fieldset>
 </body>
 
